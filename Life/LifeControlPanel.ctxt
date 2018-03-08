@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=LifeControlPanel
+comment1.params=l\ d
+comment1.target=LifeControlPanel(LifeBoard,\ LifeDisplayPanel)
+numComments=2

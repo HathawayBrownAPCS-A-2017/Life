@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Cell
+comment0.text=\r\n\ A\ Cell\ represents\ a\ cell\ in\ the\ game\ of\ Life,\ by\ \r\n\ <a\ href\ \=\ "https\://en.wikipedia.org/wiki/John_Horton_Conway">John\ Conway</a>.\r\n\ <p>\r\n\ More\ about\ the\ game\ of\ Life\:\ \r\n\ <a\ href\ \=\ "https\://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Wikipedia</a>\r\n\ \ \r\n\ @author\ Michael\ Buescher\ and\ APCS\ @\ HB\r\n\ @version\ 2018\r\n
+comment1.params=
+comment1.target=Cell()
+comment2.params=
+comment2.target=boolean\ getValue()
+comment3.params=
+comment3.target=boolean\ getNextValue()
+comment4.params=
+comment4.target=int\ getNunNeighbors()
+comment5.params=v
+comment5.target=void\ setValue(boolean)
+comment6.params=v
+comment6.target=void\ setNextValue(boolean)
+comment7.params=n
+comment7.target=void\ setNumNeighbors(int)
+comment8.params=
+comment8.target=boolean\ toggle()
+comment8.text=\r\n\ Changes\ the\ state\ of\ the\ cell.\r\n\ \r\n\ @return\ the\ new\ state\r\n
+comment9.params=
+comment9.target=void\ calculateNext()
+comment9.text=\ \r\n\ Calculates\ the\ state\ of\ the\ cell\ for\ the\ next\ generation.\r\n\ \r\n\ Uses\ the\ standard\ rules\ of\ Life\:\r\n\ \ \ A\ living\ cell\ with\ 0\ or\ 1\ living\ neighbors\ dies\ of\ loneliness\r\n\ \ \ A\ living\ cell\ with\ 2\ or\ 3\ living\ neighbors\ continues\ living\r\n\ \ \ A\ living\ cell\ with\ more\ than\ 3\ living\ neighbors\ dies\ of\ overcrowding\r\n\ \ \ A\ dead\ cell\ with\ exactly\ 3\ living\ neighbors\ gets\ born\r\n
+numComments=10
