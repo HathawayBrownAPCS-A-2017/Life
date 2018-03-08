@@ -60,6 +60,18 @@ public class LifeBoard
         getCell(r, c).toggle();
     }
         
+ private boolean onBoard (int row, int col)
+    {
+        if (row >= 0 && col >= 0 && row < numRows && col < numCols)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+        
     // ---------------------  Game Play Methods  ----------------------
     /**
      * Counts the number of living neighbors for the Cell at row r, column c.
@@ -71,7 +83,38 @@ public class LifeBoard
     public int countNeighbors (int row, int col)
     {
         int count = 0;
-        
+        if (onBoard(row - 1, col - 1) == true && board[row-1][col - 1].getValue() == true)
+        {
+            count++;
+        }
+        if (onBoard(row - 1, col) == true && board[row-1][col].getValue() == true)
+        {
+            count++;
+        }
+        if (onBoard(row - 1, col + 1) == true && board[row-1][col + 1].getValue() == true)
+        {
+            count++;
+        }
+        if (onBoard(row, col - 1) == true && board[row][col - 1].getValue() == true)
+        {
+            count++;
+        }
+        if (onBoard(row, col + 1) == true && board[row][col + 1].getValue() == true)
+        {
+            count++;
+        }
+        if (onBoard(row + 1, col - 1) == true && board[row + 1][col - 1].getValue() == true)
+        {
+            count++;
+        }
+        if (onBoard(row + 1, col) == true && board[row + 1][col].getValue() == true)
+        {
+            count++;
+        }
+        if (onBoard(row + 1, col + 1) == true && board[row + 1][col + 1].getValue() == true)
+        {
+            count++;
+        }
         return count;
     }
     
