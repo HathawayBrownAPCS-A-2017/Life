@@ -54,5 +54,15 @@ public class Cell
      */
     public void calculateNext ()
     {
+        if (value == true)
+        {
+            if(numNeighbors <= 1)
+            nextValue = false;
+            if(numNeighbors > 3)
+            nextValue = false;
+        }
+            
+        else if (value == false && numNeighbors == 3)
+        nextValue = true;
     }
 }
