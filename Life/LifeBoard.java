@@ -60,16 +60,10 @@ public class LifeBoard
         getCell(r, c).toggle();
     }
         
- private boolean onBoard (int row, int col)
+    /** Determines whether the cell at row, col is on the board.  */   
+    private boolean onBoard (int row, int col)
     {
-        if (row >= 0 && col >= 0 && row < numRows && col < numCols)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        // Write this method to return true or false
     }
         
     // ---------------------  Game Play Methods  ----------------------
@@ -83,38 +77,7 @@ public class LifeBoard
     public int countNeighbors (int row, int col)
     {
         int count = 0;
-        if (onBoard(row - 1, col - 1) == true && board[row-1][col - 1].getValue() == true)
-        {
-            count++;
-        }
-        if (onBoard(row - 1, col) == true && board[row-1][col].getValue() == true)
-        {
-            count++;
-        }
-        if (onBoard(row - 1, col + 1) == true && board[row-1][col + 1].getValue() == true)
-        {
-            count++;
-        }
-        if (onBoard(row, col - 1) == true && board[row][col - 1].getValue() == true)
-        {
-            count++;
-        }
-        if (onBoard(row, col + 1) == true && board[row][col + 1].getValue() == true)
-        {
-            count++;
-        }
-        if (onBoard(row + 1, col - 1) == true && board[row + 1][col - 1].getValue() == true)
-        {
-            count++;
-        }
-        if (onBoard(row + 1, col) == true && board[row + 1][col].getValue() == true)
-        {
-            count++;
-        }
-        if (onBoard(row + 1, col + 1) == true && board[row + 1][col + 1].getValue() == true)
-        {
-            count++;
-        }
+        // Write some code to count the number of living cells.
         return count;
     }
     
@@ -125,7 +88,7 @@ public class LifeBoard
     {
     	for(int row = 0; row < board.length; row++) {
     		for(int col = 0; col < board[row].length; col++) {
-    			countNeighbors(row, col);
+    			board[row][col].setNumNeighbors(countNeighbors(row, col));
     		}
     	}
     }
