@@ -45,6 +45,7 @@ public class Cell
     
     /** 
      * Calculates the state of the cell for the next generation.
+     * Stores the next state as nextValue
      * 
      * Uses the standard rules of Life:
      *   A living cell with 0 or 1 living neighbors dies of loneliness
@@ -54,16 +55,6 @@ public class Cell
      */
     public void calculateNext ()
     {
-        nextValue = value;
-        if (value == true)
-        {
-            if(numNeighbors <= 1)
-            nextValue = false;
-            if(numNeighbors > 3)
-            nextValue = false;
-        }
-            
-        else if (value == false && numNeighbors == 3)
-        nextValue = true;
+        // Write code to set nextValue, assuming that numNeighbors is correct
     }
 }
